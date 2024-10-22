@@ -1,6 +1,6 @@
 # prop_olx
 
-A new Flutter project.
+A new Flutter arch.
 
 ## Getting Started
 
