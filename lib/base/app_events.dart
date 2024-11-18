@@ -20,12 +20,7 @@ class VerifyOtpEvent extends AppEvent {
   VerifyOtpEvent(this.deviceType, this.deviceId, this.devicesToken, this.otp);
 }
 
-class GymSelectedEvent extends AppEvent {
-  late String gymId;
-  late String mobileNumber = "";
 
-  GymSelectedEvent(this.gymId, this.mobileNumber);
-}
 
 
 

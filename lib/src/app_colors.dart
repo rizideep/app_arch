@@ -155,17 +155,6 @@ const Color colorGreyLight = Color(0xfff4f5f6);
  const colorsGreenLight = Color(0xfff0feef);
  const colorsGreenNew = Color(0xffE1F4F3);
 
-const headerColor1 = Color(0xff2184DF);
-const headerColor2 = Color(0xffE7783A);
-const headerColor3 = Color(0xff75BD2D);
-const headerColor4 = Color(0xff00AD8E);
-const headerColor5 = Color(0xff8850F0);
-
-const bodyColor1 = Color(0xff4D9DE5);
-const bodyColor2 = Color(0xffEC9361);
-const bodyColor3 = Color(0xff91CA57);
-const bodyColor4 = Color(0xff33BDA5);
-const bodyColor5 = Color(0xffA073F3);
 
 
 

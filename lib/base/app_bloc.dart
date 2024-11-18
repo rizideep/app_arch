@@ -23,7 +23,6 @@ class AppBloc extends Bloc<AppEvent, AppStates> {
         emit(NeutralState());
         return;
       }
-
       emit(LoadingState(event));
       Response response = await tigerEventsByTypes(event);
       if (response.statusCode == 200) {
@@ -51,10 +50,7 @@ class AppBloc extends Bloc<AppEvent, AppStates> {
     if (event is VerifyOtpEvent) {
       // return await _loginRepository.userVerifyOtpApi(event);
     }
-
   }
-
-
 
   void emitStateByServerResponseStatusCode(
       Response response, Emitter<AppStates> emit, AppEvent appEvent) {

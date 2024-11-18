@@ -12,10 +12,10 @@ class ImageUploadResponseData {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    data['status'] = this.status;
-    data['file_name'] = this.fileName;
-    data['file_url'] = this.fileUrl;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['status'] = status;
+    data['file_name'] = fileName;
+    data['file_url'] = fileUrl;
     return data;
   }
 }

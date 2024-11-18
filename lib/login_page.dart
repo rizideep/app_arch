@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:prop_olx/base/app_events.dart';
 import 'package:prop_olx/signup_page.dart';
 import 'package:prop_olx/utils/getx_storage.dart';
 import 'package:shimmer/shimmer.dart';
 
-import 'add_propertie.dart';
 import 'base/app_bloc.dart';
 import 'base/app_callbacks.dart';
 import 'base/app_states.dart';
@@ -60,19 +60,23 @@ class LoginPageState extends State<LoginPage>
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: BlocConsumer<AppBloc, AppStates>(
-        bloc: appBloc,
-        listener: (context, state) async {
-          if (state is SuccessState) {
-          }
-        },
-        builder: (BuildContext context, AppStates state) {
-          return getPageState(state);
-        },
-      ),
-    );
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+        value: const SystemUiOverlayStyle(
+          statusBarColor: Colors.white,
+          statusBarBrightness: Brightness.dark,
+        ),
+        child: Scaffold(
+          backgroundColor: Colors.white,
+          body: BlocConsumer<AppBloc, AppStates>(
+            bloc: appBloc,
+            listener: (context, state) async {
+              if (state is SuccessState) {}
+            },
+            builder: (BuildContext context, AppStates state) {
+              return getPageState(state);
+            },
+          ),
+        ));
   }
 
   getPageState(AppStates appStates) {

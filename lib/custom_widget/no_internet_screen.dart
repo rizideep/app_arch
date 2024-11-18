@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-
-
 import '../base/app_callbacks.dart';
 import '../src/app_colors.dart';
 import '../src/app_font_size.dart';

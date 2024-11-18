@@ -223,197 +223,17 @@ class MyUtil {
     return "just now";
   }
 
-  static Widget showNetworkImageWithLoadingError(String? imageUrl,
-      double height, double width, String placeHolder, BoxFit boxFit) {
-    if (imageUrl != null && imageUrl.contains("http")) {
-      return Image.network(
-        imageUrl,
-        height: height,
-        width: width,
-        fit: boxFit,
-        isAntiAlias: true,
-        loadingBuilder: (context, child, loadingProgress) {
-          if (loadingProgress == null) {
-            return child;
-          } else {
-            return SizedBox(
-              height: height,
-              width: width,
-              child: Center(
-                child: CircularProgressIndicator(
-                  strokeWidth: 2.5,
-                  value: loadingProgress.expectedTotalBytes != null
-                      ? loadingProgress.cumulativeBytesLoaded /
-                          (loadingProgress.expectedTotalBytes ?? 1)
-                      : null,
-                ),
-              ),
-            );
-          }
-        },
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(height / 2),
-              ),
-              border: Border.all(color: colorDivider, width: 1),
-            ),
-            child: Image.asset(
-              placeHolder,
-              height: height,
-              width: width,
-              isAntiAlias: true,
-              fit: boxFit,
-            ),
-          );
-        },
-      );
-    }
-    if (imageUrl != null) {
-      return Image.file(
-        File(imageUrl),
-        height: height,
-        width: width,
-        fit: boxFit,
-        isAntiAlias: true,
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(
-                Radius.circular(height / 2),
-              ),
-              border: Border.all(color: colorDivider, width: 1),
-            ),
-            child: Image.asset(
-              placeHolder,
-              height: height,
-              width: width,
-              isAntiAlias: true,
-              fit: boxFit,
-            ),
-          );
-        },
-      );
-    } else {
-      return Image.asset(
-        placeHolder,
-        height: height,
-        isAntiAlias: true,
-        width: width,
-        fit: boxFit,
-      );
-    }
-  }
-
-  static Widget showNetworkImageWithHightDynaLoadingError(
-      String? imageUrl, double fixedHeight, String placeHolder, BoxFit boxFit) {
-    if (imageUrl != null && imageUrl.contains("http")) {
-      return Image.network(
-        imageUrl,
-        height: fixedHeight,
-        // Constant height for all images
-        width: double.infinity,
-        // Dynamic width that adjusts to the parent
-        fit: boxFit,
-        isAntiAlias: true,
-        loadingBuilder: (context, child, loadingProgress) {
-          if (loadingProgress == null) {
-            return child;
-          } else {
-            return SizedBox(
-              height: fixedHeight,
-              width: double.infinity,
-              child: Center(
-                child: CircularProgressIndicator(
-                  strokeWidth: 2.5,
-                  value: loadingProgress.expectedTotalBytes != null
-                      ? loadingProgress.cumulativeBytesLoaded /
-                          (loadingProgress.expectedTotalBytes ?? 1)
-                      : null,
-                ),
-              ),
-            );
-          }
-        },
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            height: fixedHeight, // Keep the height fixed
-            width: double.infinity, // Dynamic width
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(
-                Radius.circular(8), // Adjust the corner radius as needed
-              ),
-              border: Border.all(color: colorDivider, width: 1),
-            ),
-            child: Image.asset(
-              placeHolder,
-              isAntiAlias: true,
-              height: fixedHeight, // Constant height for placeholder
-              width: double.infinity, // Dynamic width for placeholder
-              fit: boxFit,
-            ),
-          );
-        },
-      );
-    }
-    if (imageUrl != null) {
-      return Image.file(
-        File(imageUrl),
-        height: fixedHeight,
-        // Constant height for file image
-        width: double.infinity,
-        // Dynamic width
-        fit: boxFit,
-        isAntiAlias: true,
-        errorBuilder: (context, error, stackTrace) {
-          return Container(
-            height: fixedHeight, // Keep the height fixed
-            width: double.infinity, // Dynamic width
-            decoration: BoxDecoration(
-              borderRadius: const BorderRadius.all(
-                Radius.circular(8), // Adjust the corner radius as needed
-              ),
-              border: Border.all(color: colorDivider, width: 1),
-            ),
-            child: Image.asset(
-              placeHolder,
-              isAntiAlias: true,
-              height: fixedHeight, // Constant height for placeholder
-              width: double.infinity, // Dynamic width for placeholder
-              fit: boxFit,
-            ),
-          );
-        },
-      );
-    } else {
-      return Image.asset(
-        placeHolder,
-        isAntiAlias: true,
-        height: fixedHeight, // Constant height for the placeholder
-        width: double.infinity, // Dynamic width
-        fit: boxFit,
-      );
-    }
-  }
-
   static Widget showNetworkImageWithLoadingErrorWithoutBorder(String? imageUrl,
-      double height, double width, String placeHolder, BoxFit boxFit) {
+      double? height, double? width, String placeHolder, BoxFit boxFit) {
     if (imageUrl != null) {
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(10.0),
-        child: getBigImage(imageUrl, height, width, placeHolder, boxFit),
-      );
+      return getBigImage(imageUrl, height, width, placeHolder, boxFit);
     } else {
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(10.0),
-        child: Image.asset(
-          placeHolder,
-          isAntiAlias: true,
-          height: height,
-          width: width,
-          fit: boxFit,
-        ),
+      return Image.asset(
+        placeHolder,
+        isAntiAlias: true,
+        height: height,
+        width: width,
+        fit: boxFit,
       );
     }
   }
@@ -509,7 +329,7 @@ class MyUtil {
     }
   }*/
 
-  static getBigImage(String? imageUrl, double height, double width,
+  static getBigImage(String? imageUrl, double? height, double? width,
       String placeHolder, BoxFit boxFit) {
     if (imageUrl != null && imageUrl.contains("http")) {
       return Image.network(
