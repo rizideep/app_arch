@@ -28,33 +28,18 @@ class LoginPageState extends State<LoginPage>
   final _formKey = GlobalKey<FormState>();
   String? username, password;
 
-  late AnimationController _controller;
-  late Animation<double> _fadeAnimation;
-  late Animation<Offset> _slideAnimation;
+
 
   @override
   void initState() {
     super.initState();
     appBloc = AppBloc();
-    _controller = AnimationController(
-      duration: const Duration(seconds: 1),
-      vsync: this,
-    );
 
-    _fadeAnimation = Tween<double>(begin: 0, end: 1).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeIn),
-    );
-
-    _slideAnimation = Tween<Offset>(
-            begin: const Offset(0, 1), end: const Offset(0, 0))
-        .animate(CurvedAnimation(parent: _controller, curve: Curves.easeOut));
-
-    _controller.forward();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+
     super.dispose();
   }
 
@@ -116,18 +101,15 @@ class LoginPageState extends State<LoginPage>
               ),
             ),
             child: Center(
-              child: FadeTransition(
-                opacity: _fadeAnimation,
-                child: Shimmer.fromColors(
-                  baseColor: Colors.white,
-                  highlightColor: Colors.purple[300]!,
-                  child: const Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 40,
-                      fontWeight: FontWeight.bold,
-                    ),
+              child: Shimmer.fromColors(
+                baseColor: Colors.white,
+                highlightColor: Colors.purple[300]!,
+                child: const Text(
+                  "Login",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
@@ -142,55 +124,49 @@ class LoginPageState extends State<LoginPage>
               key: _formKey,
               child: Column(
                 children: [
-                  SlideTransition(
-                    position: _slideAnimation,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        labelText: "Username",
-                        prefixIcon: const Icon(
-                          Icons.person,
-                          color: Colors.deepPurple,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        filled: true,
-                        fillColor: Colors.grey[200],
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Username",
+                      prefixIcon: const Icon(
+                        Icons.person,
+                        color: Colors.deepPurple,
                       ),
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter your username';
-                        }
-                        return null;
-                      },
-                      onSaved: (value) => username = value,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey[200],
                     ),
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your username';
+                      }
+                      return null;
+                    },
+                    onSaved: (value) => username = value,
                   ),
                   const SizedBox(height: 20),
-                  SlideTransition(
-                    position: _slideAnimation,
-                    child: TextFormField(
-                      decoration: InputDecoration(
-                        labelText: "Password",
-                        prefixIcon: const Icon(
-                          Icons.lock,
-                          color: Colors.deepPurple,
-                        ),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20.0),
-                        ),
-                        filled: true,
-                        fillColor: Colors.grey[200],
+                  TextFormField(
+                    decoration: InputDecoration(
+                      labelText: "Password",
+                      prefixIcon: const Icon(
+                        Icons.lock,
+                        color: Colors.deepPurple,
                       ),
-                      obscureText: true,
-                      validator: (value) {
-                        if (value!.isEmpty) {
-                          return 'Please enter your password';
-                        }
-                        return null;
-                      },
-                      onSaved: (value) => password = value,
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      filled: true,
+                      fillColor: Colors.grey[200],
                     ),
+                    obscureText: true,
+                    validator: (value) {
+                      if (value!.isEmpty) {
+                        return 'Please enter your password';
+                      }
+                      return null;
+                    },
+                    onSaved: (value) => password = value,
                   ),
                   const SizedBox(height: 30),
                   ElevatedButton(

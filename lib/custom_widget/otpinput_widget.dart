@@ -6,8 +6,7 @@ class OtpInputWidget extends StatelessWidget {
   final TextEditingController controller;
   final bool autoFocus;
 
-  const OtpInputWidget(this.controller, this.autoFocus, {Key? key})
-      : super(key: key);
+  const OtpInputWidget(this.controller, this.autoFocus, {super.key});
 
   @override
   Widget build(BuildContext context) {
