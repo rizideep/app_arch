@@ -42,260 +42,162 @@ class MyTxtStyle {
   );
 
 
-
-  static TextStyle font48Bold = const TextStyle(
+  static const font48Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 24);
-
-  static TextStyle font48Medium = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 16.0
+  );
+  static const font48Medium = TextStyle(
       fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 24);
-
-  static TextStyle font48Regular = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 16.0
+  );
+  static const font48Regular = TextStyle(
       fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 24);
-
-  static TextStyle font18GenW600 = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 16.0
+  );
+  static const font32Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral100,
-      fontSize: 18);
-
-  static TextStyle font32Medium = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 10.7
+  );
+  static const font32Medium = TextStyle(
       fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 18);
-
-  static TextStyle font32Regular = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 10.7
+  );
+  static const font32Regular = TextStyle(
       fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 18);
-
-  static TextStyle font24Bold = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 10.7
+  );
+  static const font24Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 16);
-
-  static TextStyle font16w600Gen100 = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 8.0
+  );
+  static const font24Medium = TextStyle(
+      fontWeight: FontWeight.w500,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 8.0
+  );
+  static const font20Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      color: colorsGeneral100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 16);
-
-  static TextStyle font16w600Gen10 = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.7
+  );
+  static const font20Medium = TextStyle(
+      fontWeight: FontWeight.w500,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.7
+  );
+  static const font20Regular = TextStyle(
+      fontWeight: FontWeight.w400,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.7
+  );
+  static const font18Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      color: colorsGeneral10,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 16);
-
-  static TextStyle font24Medium = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.0
+  );
+  static const font18Medium = TextStyle(
       fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 16);
-
-  static TextStyle font20Bold = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.0
+  );
+  static const font18Regular = TextStyle(
+      fontWeight: FontWeight.w400,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 6.0
+  );
+  static const font16Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 15);
-
-  static TextStyle font12w6Gen100 = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 5.3
+  );
+  static const font16Medium = TextStyle(
+      fontWeight: FontWeight.w500,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 5.3
+  );
+  static const font16Regular = TextStyle(
+      fontWeight: FontWeight.w400,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 5.3
+  );
+  static const font14Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      color: colorsGreen100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 12);
-
-  static TextStyle font16BoldGn100 = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.7
+  );
+  static const font14Medium = TextStyle(
+      fontWeight: FontWeight.w500,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.7
+  );
+  static const font14Regular = TextStyle(
+      fontWeight: FontWeight.w400,
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.7
+  );
+  static const font12Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral100,
-      fontSize: 16);
-
-  static TextStyle font20Medium = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.0
+  );
+  static const font12Medium = TextStyle(
       fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 15);
-
-  static TextStyle font15GenW500 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral20,
-      fontSize: 15);
-
-  static TextStyle font20Regular = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.0
+  );
+  static const font12Regular = TextStyle(
       fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 15);
-
-  static TextStyle font13w400Gen70 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral70,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 13);
-
-
-  static TextStyle font16w400Gen500 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      color: colorsGeneral70,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 16);
-
-  static TextStyle font18Bold = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 4.0
+  );
+  static const font11Bold = TextStyle(
       fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font14BoldGen100 = const TextStyle(
-      fontWeight: FontWeight.w600,
-      color: colorsGeneral100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font14BoldPr100 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsPrimary100_2,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font18Medium = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 3.7
+  );
+  static const font11Medium = TextStyle(
       fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font14w500Gen100 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      color: colorsGeneral100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-
-
-  static TextStyle font18Regular = const TextStyle(
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 3.7
+  );
+  static const font11Regular = TextStyle(
       fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font18RegularG4 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral40,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font18Gen6G4 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral60,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font18RegularG100 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font1Blu4W400 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsBlue100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font14Blu4W500 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      color: colorsBlue100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 14);
-
-  static TextStyle font16Bold = const TextStyle(
-      fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 13);
-
-  static TextStyle font16Medium = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 13);
-
-  static TextStyle font13w5Gen100 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral100,
-      fontSize: 13);
-
-  static TextStyle font10w5Gen100 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral100,
-      fontSize: 10);
-
-  static TextStyle font16Regular = const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 13);
+      fontFamily: "Inter",
+      fontStyle:  FontStyle.normal,
+      fontSize: 3.7
+  );
 
 
-
-  static TextStyle font14Bold = const TextStyle(
-      fontWeight: FontWeight.w600,
-      color: colorsGeneral100,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 12);
-
-  static TextStyle font14Medium = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 12);
-
-  static TextStyle font14Regular = const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 12);
-
-  static TextStyle font14GenW400 = const TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral90,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 12);
-
-  static TextStyle font12Bold = const TextStyle(
-      fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 11);
-
-  static TextStyle font12Medium = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 11);
-
-  static TextStyle font12Regular = const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 11);
-
-
-
-  static TextStyle font11Bold = const TextStyle(
-      fontWeight: FontWeight.w600,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 10);
-
-
-
-  static TextStyle font13w500Gen100 = const TextStyle(
-      fontWeight: FontWeight.w500,
-      fontFamily: AppConstant.appFontInter,
-      color: colorsGeneral100,
-      fontSize: 13);
-
-  static TextStyle font11Regular = const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 10);
-
-  static TextStyle font10RegularG7 = const   TextStyle(
-      fontWeight: FontWeight.w400,
-      color: colorsGeneral70,
-      fontFamily: AppConstant.appFontInter,
-      fontSize: 10);
 }

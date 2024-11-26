@@ -28,11 +28,11 @@ class NoDataWidget extends StatelessWidget {
             ),
             Text(
               headerText,
-              style: MyTxtStyle.font16w600Gen100,
+              style: MyTxtStyle.font16Regular,
             ),
             Text(
               subString,
-              style: MyTxtStyle.font13w400Gen70,
+              style: MyTxtStyle.font14Medium,
             ),
           ],
         ),
