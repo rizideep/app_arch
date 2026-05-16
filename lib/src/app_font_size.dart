@@ -27,15 +27,6 @@ const double fontSize25 = 25.0;
 const double fontSize26 = 26.0;
 
 
-const double appButtonRoundedRadius = 8.0;
-const double appButtonPaddingVertical = 15.0;
-const double appButtonPaddingVertical13 = 13.0;
-
-const double cardCornerRadius11 = 11.0;
-const double cardCornerRadius13 = 13.0;
-const double cardCornerRadius15 = 15.0;
-const double cardCornerRadius18 = 18.0;
-const double cardPaddingLR13 = 13.0;
-const double cardPaddingTB13 = 13.0;
+ 
 
 
